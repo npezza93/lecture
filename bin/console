@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "lecture"
+
+# You can add fixtures and/or initialization code here to make experimenting
+def reload!(print = true)
+  puts "Reloading..." if print
+  files = $LOADED_FEATURES.select do |feat|
+    feat =~ /\/lecture\// && feat.exclude?("version")
+  end
+  files.each { |file| load file }
+  true
+end
+
+require "pry"
+Pry.start
