@@ -8,7 +8,7 @@ require "lecture"
 def reload!(print = true)
   puts "Reloading..." if print
   files = $LOADED_FEATURES.select do |feat|
-    feat =~ /\/lecture\// && feat.exclude?("version")
+    feat =~ /\/lecture\//
   end
   files.each { |file| load file }
   true
