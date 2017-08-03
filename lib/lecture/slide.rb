@@ -11,7 +11,7 @@ module Lecture
     end
 
     def display
-      type_class.new(content: content, options: options).display
+      type_class.new(content: content, **options).display
     end
 
     private
