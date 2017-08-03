@@ -30,6 +30,7 @@ module Lecture
       when "a"         then first_slide
       when "d"         then last_slide
       when "j"         then jump_to
+      when "w"         then wipe
       when "q"         then clear_and_exit
       end
     end
@@ -66,6 +67,10 @@ module Lecture
 
     def last_slide
       display(slides.size - 1)
+    end
+
+    def wipe
+      display(current_slide)
     end
   end
 end
