@@ -10,6 +10,9 @@ require "lecture/terminal"
 require "lecture/slide"
 
 module Lecture
+  mattr_writer :pygment_style, :character_print_delay, :slide_types,
+               :transition_time
+
   def self.character_print_delay
     @@character_print_delay || 0.018
   end
