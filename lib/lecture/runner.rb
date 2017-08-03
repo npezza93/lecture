@@ -4,6 +4,15 @@ module Lecture
   class Runner
     include Terminal
 
+    Lecture.slide_types.each do |format|
+      define_method(format) do |slide_content, **options, &block|
+        slides.push(
+          Slide.new(content: slide_content, format: format, **options)
+        )
+        block.call if block.present?
+      end
+    end
+
     attr_accessor :current_slide, :slides, :deck
 
     def initialize(deck)
@@ -13,7 +22,7 @@ module Lecture
     end
 
     def execute
-      load deck
+      instance_eval(File.read(deck))
       first_slide
 
       loop do
