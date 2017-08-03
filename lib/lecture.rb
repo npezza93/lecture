@@ -11,4 +11,33 @@ require "lecture/slide"
 
 module Lecture
   CHARACTER_PRINT_DELAY = 0.018
+
+  HELP = <<~HELP
+    #{'VERSION'.bold} #{Lecture::VERSION}
+
+    #{'NAME'.bold}
+      lecture - Terminal Slideshow
+
+    #{'SYNOPSIS'.bold}
+      lecture [--help] <slides>.rb
+
+    #{'OPTIONS'.bold}
+      -h, --help
+         Print this help
+
+    #{'COMMANDS'.bold}
+      Next slide:        SPC, Right Arrow
+      Previous slide:    Left Arrow
+      First slide:       a
+      Last slide:        d
+      Jump to slide:     j
+      Reload slide:      w
+      Quit:              q
+
+    #{'SLIDE TYPES'.bold}
+      code
+      center
+      block
+      section
+  HELP
 end
