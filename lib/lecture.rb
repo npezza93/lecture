@@ -10,7 +10,18 @@ require "lecture/terminal"
 require "lecture/slide"
 
 module Lecture
-  CHARACTER_PRINT_DELAY = 0.018
+  def self.character_print_delay
+    @@character_print_delay || 0.018
+  end
+
+  def self.transition_time
+    @@transition_time || 0.3
+  end
+
+  def self.pygment_style
+    @@pygment_style || "paraiso-dark"
+  end
+
 
   def self.available_colors
     String.colors
