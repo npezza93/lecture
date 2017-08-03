@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + "/../lib")
+
+require "lecture"
+require "getoptlong"
+
+opts = GetoptLong.new(["--help", "-h", GetoptLong::NO_ARGUMENT])
+opts.each do |opt, _|
+  next unless opt == "--help"
+
+  puts Lecture::HELP
+  exit 0
+end
+
+if ARGV.empty?
+  puts "lecture: A file must be supplied\n\n"
+  puts Lecture::HELP
+  exit 1
+end
+
+unless File.exist?(slide_deck = ARGV[0])
+  puts "lecture: Can't find slide deck '#{slide_deck}'"
+  exit 1
+end
+
+Lecture.execute(slide_deck)
