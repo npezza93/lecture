@@ -52,11 +52,12 @@ module Lecture
 
     def print_line(line, x, y)
       move_to(x, y)
-      tran_time = 0.3
 
       line.each_char do |c|
         print c
-        sleep [tran_time / line.length, Lecture.character_print_delay].min
+        sleep [
+          Lecture.transition_time / line.length, Lecture.character_print_delay
+        ].min
       end
     end
   end
