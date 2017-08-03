@@ -13,7 +13,7 @@ module Lecture
         end
       end
 
-      def initialize(content:, options:)
+      def initialize(content:, **options)
         @content = content
         @options = options.with_indifferent_access
       end
