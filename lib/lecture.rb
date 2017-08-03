@@ -22,6 +22,9 @@ module Lecture
     @@pygment_style || "paraiso-dark"
   end
 
+  def self.slide_types
+    @@slide_types ||= Set.new
+  end
 
   def self.available_colors
     String.colors
