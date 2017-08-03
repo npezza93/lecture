@@ -37,6 +37,10 @@ module Lecture
     String.modes
   end
 
+  def self.execute(deck)
+    Runner.new(deck).execute
+  end
+
   HELP = <<~HELP
     #{'VERSION'.bold} #{Lecture::VERSION}
 
