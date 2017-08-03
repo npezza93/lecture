@@ -41,3 +41,9 @@ module Lecture
       section
   HELP
 end
+
+require "lecture/slide/base"
+require "lecture/slide/center"
+require "lecture/slide/code"
+require "lecture/slide/section"
+require "lecture/slide/block"
