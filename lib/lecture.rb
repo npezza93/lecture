@@ -47,3 +47,5 @@ require "lecture/slide/center"
 require "lecture/slide/code"
 require "lecture/slide/section"
 require "lecture/slide/block"
+
+require "lecture/runner"
