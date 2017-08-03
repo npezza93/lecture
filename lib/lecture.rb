@@ -12,6 +12,14 @@ require "lecture/slide"
 module Lecture
   CHARACTER_PRINT_DELAY = 0.018
 
+  def self.available_colors
+    String.colors
+  end
+
+  def self.available_modes
+    String.modes
+  end
+
   HELP = <<~HELP
     #{'VERSION'.bold} #{Lecture::VERSION}
 
