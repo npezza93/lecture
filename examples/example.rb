@@ -25,3 +25,5 @@ code(%(
 section("This is a section") do
   center("This is a centered slide inside a section")
 end
+
+block("The lines in this block of text are\nnot centered")
