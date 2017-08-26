@@ -17,7 +17,7 @@ in Ruby. There is an example in the examples folder, found [here](https://github
 
 ### Configuration
 
-At the top of your slide.rb file you can use the `configure` method to configure
+At the top of your slides.rb file you can use the `configure` method to configure
 settings within Lecture.
 
 ```ruby
@@ -58,7 +58,10 @@ A block slide preserves the text formatting, but centers the slide as a whole on
 
 
 ```ruby
-block("The lines in this block of text are\nnot centered")
+block <<~SLIDE
+  The lines in this block of text are
+  not centered
+SLIDE
 ```
 
 ![Block](https://raw.github.com/npezza93/lecture/master/screenshots/block.png)
@@ -100,13 +103,13 @@ code(%(
 
 ### Keyboard Controls
 
-- <kbd>SPACE</kbd> and <kbd>→</kbd> go to the next slide
+- <kbd>SPACE</kbd> or <kbd>→</kbd> go to the next slide
 - <kbd>←</kbd> go to the previous slide
 - <kbd>a</kbd> jumps to the first slide of the deck
 - <kbd>d</kbd> jumps to the last slide of the deck
 - <kbd>j</kbd> followed by a slide number(0 index) jumps to the given slide
 - <kbd>w</kbd> redraws the slide
-- <kbd>q</kbd> exits the slideshow
+- <kbd>q</kbd> or <kbd>ESC</kbd> exits the slideshow
 
 ### String Utilities
 

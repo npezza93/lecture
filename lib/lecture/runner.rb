@@ -44,7 +44,7 @@ module Lecture
       when "d"         then last_slide
       when "j"         then jump_to
       when "w"         then wipe
-      when "q"         then clear_and_exit
+      when "q", "\e"   then clear_and_exit
       end
     end
 
