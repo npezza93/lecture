@@ -13,7 +13,10 @@ module Lecture
         half_count_of_dashes = [1, (max_col_length - 3)].max / 2
         dashes = "─" * half_count_of_dashes
 
-        "#{dashes} § #{dashes}\n\n#{content}\n\n#{dashes} § #{dashes}"
+        header_section = "#{dashes}#{Lecture.section_header_text}#{dashes}"
+        footer_section = "#{dashes}#{Lecture.section_footer_text}#{dashes}"
+
+        "#{header_section}\n\n#{content}\n\n#{footer_section}"
       end
 
       def max_col_length

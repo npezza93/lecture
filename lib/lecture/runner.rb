@@ -30,6 +30,10 @@ module Lecture
       end
     end
 
+    def configure
+      yield(Config.new)
+    end
+
     private
 
     def command_handler

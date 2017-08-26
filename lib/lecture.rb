@@ -6,12 +6,13 @@ require "io/console"
 require "active_support/all"
 
 require "lecture/version"
+require "lecture/config"
 require "lecture/terminal"
 require "lecture/slide"
 
 module Lecture
   mattr_writer :pygment_style, :character_print_delay, :slide_types,
-               :transition_time
+               :transition_time, :section_header_text, :section_footer_text
 
   def self.character_print_delay
     @@character_print_delay || 0.018
@@ -27,6 +28,14 @@ module Lecture
 
   def self.slide_types
     @@slide_types ||= Set.new
+  end
+
+  def self.section_header_text
+    @@section_header_text ||= " § "
+  end
+
+  def self.section_footer_text
+    @@section_footer_text ||= " § "
   end
 
   def self.available_colors

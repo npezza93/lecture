@@ -15,6 +15,24 @@ in Ruby. There is an example in the examples folder, found [here](https://github
   ❯ lecture #{slides.rb}
 ```
 
+### Configuration
+
+At the top of your slide.rb file you can use the `configure` method to configure
+settings within Lecture.
+
+```ruby
+configure do |lecture|
+  lecture.section_footer_text = "───"
+end
+```
+
+Configurable settings include:
+- character_print_delay
+- transition_time
+- pygment_style
+- section_header_text
+- section_footer_text
+
 ### Slide Types
 
 When writing your slides.rb file you have four slide types available.

@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+configure do |lecture|
+  lecture.section_footer_text = "───"
+end
+
 center <<~SLIDE
   Hello
 
