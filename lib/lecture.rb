@@ -64,10 +64,10 @@ module Lecture
       Quit:              q
 
     #{'SLIDE TYPES'.bold}
-      code
-      center
-      block
-      section
+      code               Highlighted block of code
+      center             All lines are centered on the screen
+      block              The section of text is centered as whole
+      section            A stylized section identifier slide
   HELP
 end
 
