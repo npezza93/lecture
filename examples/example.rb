@@ -11,7 +11,7 @@ center <<~SLIDE
   #{'Slide 2'.bold}
 
 
-  This is the second slide
+  This is the #{'second'.green} slide
 SLIDE
 
 code(%(

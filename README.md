@@ -1,6 +1,6 @@
 # Lecture
 
-Lecture is a way to present a talk through the terminal. All slides are written
+Lecture is a way to present a slideshow through the terminal. All slides are written
 in Ruby.
 
 ## Installation
@@ -79,6 +79,21 @@ code(%(
 ```
 
 ![Code](https://raw.github.com/npezza93/lecture/master/screenshots/code.png)
+
+### Utilities
+
+You have a variety of string colors and modes available when creating slides. To get a list of colors and modes you can use: `Lecture.available_colors` and `Lecture.available_modes`.
+
+```ruby
+center <<~SLIDE
+  #{'Slide'.bold}
+
+
+  This is a #{'slide'.green}
+SLIDE
+```
+
+You can also use ANSI escape sequences and unicode characters to spice up your slides.
 
 ## Development
 
