@@ -1,7 +1,7 @@
 # Lecture
 
 Lecture is a way to present a slideshow through the terminal. All slides are written
-in Ruby.
+in Ruby. There is an example in the examples folder, found [here](https://github.com/npezza93/lecture/tree/master/examples).
 
 ## Installation
 
@@ -80,7 +80,17 @@ code(%(
 
 ![Code](https://raw.github.com/npezza93/lecture/master/screenshots/code.png)
 
-### Utilities
+### Keyboard Controls
+
+- <kbd>SPACE</kbd> and <kbd>→</kbd> go to the next slide
+- <kbd>←</kbd> go to the previous slide
+- <kbd>a</kbd> jumps to the first slide of the deck
+- <kbd>d</kbd> jumps to the last slide of the deck
+- <kbd>j</kbd> followed by a slide number(0 index) jumps to the given slide
+- <kbd>w</kbd> redraws the slide
+- <kbd>q</kbd> exits the slideshow
+
+### String Utilities
 
 You have a variety of string colors and modes available when creating slides. To get a list of colors and modes you can use: `Lecture.available_colors` and `Lecture.available_modes`.
 
